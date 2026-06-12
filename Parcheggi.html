@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="titleParking">Parcheggi & Trasporti a Levanto</title>
+
+  <style>
+    :root {
+      --bg: #050816;
+      --card: #111827;
+      --accent: #22c55e;
+      --alert: #dc2626;
+      --warning: #f59e0b;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --radius-lg: 20px;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      padding: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .place {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .alert-box {
+      background: rgba(220, 38, 38, 0.15);
+      border-left: 4px solid var(--alert);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .warning-box {
+      background: rgba(245, 158, 11, 0.15);
+      border-left: 4px solid var(--warning);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .place h2 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .place p, li {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+
+    iframe {
+      width: 100%;
+      height: 180px;
+      border: 0;
+      border-radius: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #022c22;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 8px;
+      margin-right: 6px;
+    }
+
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="Amandola.html" class="back" data-i18n="back">‹ Torna indietro</a>
+
+  <h1 data-i18n="parkingTitle">Parcheggi & Trasporti a Levanto</h1>
+
+  <!-- PARCHEGGIO PRIVATO -->
+  <div class="place">
+    <h2 data-i18n="privateTitle">Parcheggio privato (a pagamento)</h2>
+    <p data-i18n="privateDesc">
+      Parcheggio privato non coperto in Località San Gottardo 3. Disponibile su richiesta.
+    </p>
+    <iframe src="https://www.google.com/maps?q=Località+San+Gottardo+3+Levanto&output=embed"></iframe>
+    <a class="btn" href="https://maps.google.com/?q=Località+San+Gottardo+3+Levanto" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- PARCHEGGI PUBBLICI -->
+  <div class="place">
+    <h2 data-i18n="publicTitle">Parcheggi pubblici a Levanto</h2>
+    <p data-i18n="publicDesc">
+      Levanto offre diverse aree di sosta: gratuite, a pagamento e con pass turistico.
+    </p>
+    <ul>
+      <li data-i18n="p1">🅿️ Parcheggio Stazione (ampio, a pagamento)</li>
+      <li data-i18n="p2">🅿️ Parcheggio Moltedi (vicino al mare, a pagamento)</li>
+      <li data-i18n="p3">🅿️ Parcheggio San Gottardo (gratuito, più distante)</li>
+      <li data-i18n="p4">🅿️ Parcheggi blu in centro (a pagamento)</li>
+      <li data-i18n="p5">🅿️ Parcheggi bianchi (gratuiti, limitati)</li>
+    </ul>
+    <a class="btn btn-secondary" href="https://www.levantemultiservizi.it" target="_blank" data-i18n="multiLink">
+      Sistema parcheggi Levanto Multiservizi
+    </a>
+  </div>
+
+  <!-- PASS TURISTICO -->
+  <div class="place">
+    <h2 data-i18n="passTitle">Pass Turistico Levanto</h2>
+    <p data-i18n="passDesc">
+      Il pass turistico permette di parcheggiare gratuitamente nelle zone riservate ai residenti
+      <strong>Zona B senza box</strong>.
+    </p>
+    <a class="btn btn-secondary" href="https://www.levantemultiservizi.it" target="_blank" data-i18n="passLink">
+      Informazioni sul pass turistico
+    </a>
+  </div>
+
+  <!-- DIVIETI MERCOLEDÌ -->
+  <div class="place">
+    <div class="alert-box">
+      <h2 data-i18n="wedTitle">⚠️ Divieti del mercoledì (mercato)</h2>
+      <p data-i18n="wedDesc">
+        Ogni mercoledì dalle 6:00 alle 14:00 è vietata la sosta con rimozione nelle seguenti aree:
+      </p>
+      <ul>
+        <li data-i18n="wed1">🚫 Orti Bardellini</li>
+        <li data-i18n="wed2">🚫 Lungomare lato Ponente</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ZTL -->
+  <div class="place">
+    <div class="warning-box">
+      <h2 data-i18n="ztlTitle">🚧 ZTL Via Jacopo</h2>
+      <p data-i18n="ztlDesc">
+        All’ingresso di Via Jacopo è presente una ZTL.  
+        Procedere solo se il pannello luminoso è <strong>verde</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- TRASPORTI PUBBLICI -->
+  <div class="place">
+    <h2 data-i18n="transportTitle">Trasporti pubblici</h2>
+    <p data-i18n="transportDesc">Levanto è ben collegata con Cinque Terre, La Spezia e Genova.</p>
+
+    <ul>
+      <li data-i18n="t1">🚆 Treni: collegamenti frequenti per Cinque Terre, La Spezia, Genova e Pisa.</li>
+      <li data-i18n="t1b">🎫 Biglietti acquistabili in stazione o tramite app Trenitalia.</li>
+
+      <li data-i18n="t2">🚌 Bus ATC: collegamenti per La Spezia, Bonassola e località vicine.</li>
+      <li data-i18n="t2b">📍 Fermata principale: Piazza Cavour.</li>
+
+      <li data-i18n="t3">⛴️ Battelli: partenze giornaliere per Cinque Terre, Portovenere e Lerici.</li>
+      <li data-i18n="t3b">🌊 Ottima alternativa panoramica al treno.</li>
+
+      <li data-i18n="t4">🚲 Noleggio bici: ideale per la ciclopedonale Levanto–Bonassola–Framura.</li>
+    </ul>
+
+    <a class="btn btn-secondary" href="https://www.trenitalia.com" target="_blank" data-i18n="trainLink">
+      Trenitalia – Orari e biglietti
+    </a>
+    <a class="btn btn-secondary" href="https://www.atcesercizio.it" target="_blank" data-i18n="busLink">
+      ATC – Linee e orari
+    </a>
+    <a class="btn btn-secondary" href="https://www.navigazionegolfodeipoeti.it" target="_blank" data-i18n="boatLink">
+      Battelli – Orari e info
+    </a>
+  </div>
+ 
+  <footer style="text-align:center; font-size:11px; color:#6b7280; margin-top:40px; line-height:1.4;">
+    <span data-i18n="footerCopy">© 2024 Amandola Guest App – Tutti i diritti riservati.</span><br>
+    <span data-i18n="footerNoRepro">Vietata la riproduzione senza autorizzazione.</span><br>
+    <span data-i18n="footerDisclaimer">Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.</span>
+  </footer>
+
+  <!-- TRADUZIONI -->
+  <script>
+    const translations = {
+      /* ITALIANO */
+      it: {
+        titleParking: "Parcheggi & Trasporti a Levanto",
+        parkingTitle: "Parcheggi & Trasporti a Levanto",
+        back: "‹ Torna indietro",
+
+        privateTitle: "Parcheggio privato (a pagamento)",
+        privateDesc: "Parcheggio privato non coperto in Località San Gottardo 3. Disponibile su richiesta.",
+
+        publicTitle: "Parcheggi pubblici a Levanto",
+        publicDesc: "Levanto offre diverse aree di sosta: gratuite, a pagamento e con pass turistico.",
+        p1: "🅿️ Parcheggio Stazione (ampio, a pagamento)",
+        p2: "🅿️ Parcheggio Moltedi (vicino al mare, a pagamento)",
+        p3: "🅿️ Parcheggio San Gottardo (gratuito, più distante)",
+        p4: "🅿️ Parcheggi blu in centro (a pagamento)",
+        p5: "🅿️ Parcheggi bianchi (gratuiti, limitati)",
+        multiLink: "Sistema parcheggi Levanto Multiservizi",
+
+        passTitle: "Pass Turistico Levanto",
+        passDesc: "Il pass turistico permette di parcheggiare gratuitamente nelle zone residenti Zona B senza box.",
+        passLink: "Informazioni sul pass turistico",
+
+        wedTitle: "⚠️ Divieti del mercoledì (mercato)",
+        wedDesc: "Ogni mercoledì dalle 6:00 alle 14:00 è vietata la sosta con rimozione nelle seguenti aree:",
+        wed1: "🚫 Orti Bardellini",
+        wed2: "🚫 Lungomare lato Ponente",
+
+        ztlTitle: "🚧 ZTL Via Jacopo",
+        ztlDesc: "All’ingresso di Via Jacopo è presente una ZTL. Procedere solo se il pannello luminoso è verde.",
+
+        transportTitle: "Trasporti pubblici",
+        transportDesc: "Levanto è ben collegata con Cinque Terre, La Spezia e Genova.",
+        t1: "🚆 Treni: collegamenti frequenti per Cinque Terre, La Spezia, Genova e Pisa.",
+        t1b: "🎫 Biglietti acquistabili in stazione o tramite app Trenitalia.",
+        t2: "🚌 Bus ATC: collegamenti per La Spezia, Bonassola e località vicine.",
+        t2b: "📍 Fermata principale: Piazza Cavour.",
+        t3: "⛴️ Battelli: partenze giornaliere per Cinque Terre, Portovenere e Lerici.",
+        t3b: "🌊 Ottima alternativa panoramica al treno.",
+        t4: "🚲 Noleggio bici: ideale per la ciclopedonale Levanto–Bonassola–Framura.",
+
+        trainLink: "Trenitalia – Orari e biglietti",
+        busLink: "ATC – Linee e orari",
+        boatLink: "Battelli – Orari e info",
+
+        openMaps: "Apri su Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tutti i diritti riservati.",
+        footerNoRepro: "Vietata la riproduzione senza autorizzazione.",
+        footerDisclaimer: "Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.",
+
+      },
+
+      /* ENGLISH */
+      en: {
+        titleParking: "Parking & Transport in Levanto",
+        parkingTitle: "Parking & Transport in Levanto",
+        back: "‹ Go back",
+
+        privateTitle: "Private parking (paid)",
+        privateDesc: "Uncovered private parking in Località San Gottardo 3. Available on request.",
+
+        publicTitle: "Public parking in Levanto",
+        publicDesc: "Levanto offers several parking areas: free, paid and tourist pass zones.",
+        p1: "🅿️ Station Parking (large, paid)",
+        p2: "🅿️ Moltedi Parking (near the sea, paid)",
+        p3: "🅿️ San Gottardo Parking (free, further away)",
+        p4: "🅿️ Blue lines in the center (paid)",
+        p5: "🅿️ White lines (free, limited)",
+        multiLink: "Levanto Multiservizi parking system",
+
+        passTitle: "Levanto Tourist Pass",
+        passDesc: "The tourist pass allows free parking in resident areas Zone B (no garage).",
+        passLink: "Tourist pass information",
+
+        wedTitle: "⚠️ Wednesday restrictions (market)",
+        wedDesc: "Every Wednesday from 6:00 to 14:00 parking is prohibited in:",
+        wed1: "🚫 Orti Bardellini",
+        wed2: "🚫 Seafront west side",
+
+        ztlTitle: "🚧 ZTL Via Jacopo",
+        ztlDesc: "A ZTL is active at the entrance of Via Jacopo. Proceed only if the light panel is green.",
+
+        transportTitle: "Public transport",
+        transportDesc: "Levanto is well connected with Cinque Terre, La Spezia and Genoa.",
+        t1: "🚆 Trains: frequent connections to Cinque Terre, La Spezia, Genoa and Pisa.",
+        t1b: "🎫 Tickets available at the station or via the Trenitalia app.",
+        t2: "🚌 ATC buses: connections to La Spezia, Bonassola and nearby towns.",
+        t2b: "📍 Main stop: Piazza Cavour.",
+        t3: "⛴️ Ferries: daily departures to Cinque Terre, Portovenere and Lerici.",
+        t3b: "🌊 A scenic alternative to the train.",
+        t4: "🚲 Bike rental: ideal for the Levanto–Bonassola–Framura cycle path.",
+
+        trainLink: "Trenitalia – Timetables & tickets",
+        busLink: "ATC – Routes & schedules",
+        boatLink: "Ferries – Info & schedules",
+
+        openMaps: "Open in Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – All rights reserved.",
+        footerNoRepro: "Reproduction without permission is prohibited.",
+        footerDisclaimer: "Information may vary: please verify with the listed facilities.",
+
+      },
+
+      /* FRANÇAIS */
+      fr: {
+        titleParking: "Parkings & Transports à Levanto",
+        parkingTitle: "Parkings & Transports à Levanto",
+        back: "‹ Retour",
+
+        privateTitle: "Parking privé (payant)",
+        privateDesc: "Parking privé non couvert à Località San Gottardo 3. Disponible sur demande.",
+
+        publicTitle: "Parkings publics à Levanto",
+        publicDesc: "Levanto propose plusieurs zones de stationnement : gratuites, payantes et avec pass touristique.",
+        p1: "🅿️ Parking de la gare (grand, payant)",
+        p2: "🅿️ Parking Moltedi (près de la mer, payant)",
+        p3: "🅿️ Parking San Gottardo (gratuit, plus éloigné)",
+        p4: "🅿️ Zones bleues au centre (payantes)",
+        p5: "🅿️ Zones blanches (gratuites, limitées)",
+        multiLink: "Système de stationnement Levanto Multiservizi",
+
+        passTitle: "Pass touristique Levanto",
+        passDesc: "Le pass touristique permet de se garer gratuitement dans les zones résidentielles Zone B sans garage.",
+        passLink: "Informations sur le pass touristique",
+
+        wedTitle: "⚠️ Restrictions du mercredi (marché)",
+        wedDesc: "Chaque mercredi de 6h00 à 14h00, le stationnement est interdit dans :",
+        wed1: "🚫 Orti Bardellini",
+        wed2: "🚫 Front de mer côté ouest",
+
+        ztlTitle: "🚧 ZTL Via Jacopo",
+        ztlDesc: "Une ZTL est active à l’entrée de Via Jacopo. Avancer uniquement si le panneau lumineux est vert.",
+
+        transportTitle: "Transports publics",
+        transportDesc: "Levanto est bien reliée aux Cinque Terre, La Spezia et Gênes.",
+        t1: "🚆 Trains : liaisons fréquentes vers Cinque Terre, La Spezia, Gênes et Pise.",
+        t1b: "🎫 Billets disponibles en gare ou via l’application Trenitalia.",
+        t2: "🚌 Bus ATC : liaisons vers La Spezia, Bonassola et les environs.",
+        t2b: "📍 Arrêt principal : Piazza Cavour.",
+        t3: "⛴️ Bateaux : départs quotidiens vers Cinque Terre, Portovenere et Lerici.",
+        t3b: "🌊 Une alternative panoramique au train.",
+        t4: "🚲 Location de vélos : idéale pour la piste cyclable Levanto–Bonassola–Framura.",
+
+        trainLink: "Trenitalia – Horaires & billets",
+        busLink: "ATC – Lignes & horaires",
+        boatLink: "Bateaux – Infos & horaires",
+
+        openMaps: "Ouvrir dans Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      /* ESPAÑOL */
+      es: {
+        titleParking: "Aparcamiento y transporte en Levanto",
+        parkingTitle: "Aparcamiento y transporte en Levanto",
+        back: "‹ Volver",
+
+        privateTitle: "Aparcamiento privado (de pago)",
+        privateDesc: "Aparcamiento privado sin techo en Località San Gottardo 3. Disponible bajo petición.",
+
+        publicTitle: "Aparcamientos públicos en Levanto",
+        publicDesc: "Levanto ofrece varias zonas de aparcamiento: gratuitas, de pago y con pase turístico.",
+        p1: "🅿️ Aparcamiento de la estación (grande, de pago)",
+        p2: "🅿️ Aparcamiento Moltedi (cerca del mar, de pago)",
+        p3: "🅿️ Aparcamiento San Gottardo (gratis, más lejos)",
+        p4: "🅿️ Zonas azules en el centro (de pago)",
+        p5: "🅿️ Zonas blancas (gratis, limitadas)",
+        multiLink: "Sistema de aparcamiento Levanto Multiservizi",
+
+        passTitle: "Pase turístico de Levanto",
+        passDesc: "El pase turístico permite aparcar gratis en las zonas residenciales Zona B sin garaje.",
+        passLink: "Información sobre el pase turístico",
+
+        wedTitle: "⚠️ Restricciones del miércoles (mercado)",
+        wedDesc: "Cada miércoles de 6:00 a 14:00 está prohibido aparcar en:",
+        wed1: "🚫 Orti Bardellini",
+        wed2: "🚫 Paseo marítimo lado oeste",
+
+        ztlTitle: "🚧 ZTL Via Jacopo",
+        ztlDesc: "Hay una ZTL en la entrada de Via Jacopo. Avanzar solo si el panel luminoso está en verde.",
+
+        transportTitle: "Transporte público",
+        transportDesc: "Levanto está bien conectada con Cinque Terre, La Spezia y Génova.",
+        t1: "🚆 Trenes: conexiones frecuentes a Cinque Terre, La Spezia, Génova y Pisa.",
+        t1b: "🎫 Billetes disponibles en la estación o en la app de Trenitalia.",
+        t2: "🚌 Autobuses ATC: conexiones a La Spezia, Bonassola y alrededores.",
+        t2b: "📍 Parada principal: Piazza Cavour.",
+        t3: "⛴️ Barcos: salidas diarias a Cinque Terre, Portovenere y Lerici.",
+        t3b: "🌊 Una alternativa panorámica al tren.",
+        t4: "🚲 Alquiler de bicicletas: ideal para la ciclovía Levanto–Bonassola–Framura.",
+
+        trainLink: "Trenitalia – Horarios y billetes",
+        busLink: "ATC – Líneas y horarios",
+        boatLink: "Barcos – Información y horarios",
+
+        openMaps: "Abrir en Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      /* DEUTSCH */
+      de: {
+        titleParking: "Parken & Verkehr in Levanto",
+        parkingTitle: "Parken & Verkehr in Levanto",
+        back: "‹ Zurück",
+
+        privateTitle: "Privatparkplatz (kostenpflichtig)",
+        privateDesc: "Nicht überdachter Privatparkplatz in Località San Gottardo 3. Auf Anfrage verfügbar.",
+
+        publicTitle: "Öffentliche Parkplätze in Levanto",
+        publicDesc: "In Levanto gibt es verschiedene Parkzonen: kostenlos, gebührenpflichtig und mit Touristenpass.",
+        p1: "🅿️ Bahnhofparkplatz (groß, gebührenpflichtig)",
+        p2: "🅿️ Moltedi Parkplatz (nah am Meer, gebührenpflichtig)",
+        p3: "🅿️ San Gottardo Parkplatz (kostenlos, weiter entfernt)",
+        p4: "🅿️ Blaue Zonen im Zentrum (gebührenpflichtig)",
+        p5: "🅿️ Weiße Zonen (kostenlos, begrenzt)",
+        multiLink: "Parksystem Levanto Multiservizi",
+
+        passTitle: "Touristenpass Levanto",
+        passDesc: "Der Touristenpass erlaubt kostenloses Parken in Bewohnerzonen Zone B ohne Garage.",
+        passLink: "Informationen zum Touristenpass",
+
+        wedTitle: "⚠️ Mittwochsverbote (Markt)",
+        wedDesc: "Jeden Mittwoch von 6:00 bis 14:00 ist das Parken verboten in:",
+        wed1: "🚫 Orti Bardellini",
+        wed2: "🚫 Uferpromenade Westseite",
+
+        ztlTitle: "🚧 ZTL Via Jacopo",
+        ztlDesc: "Am Eingang der Via Jacopo gibt es eine ZTL. Weiterfahren nur bei grünem Licht.",
+
+        transportTitle: "Öffentlicher Verkehr",
+        transportDesc: "Levanto ist gut mit Cinque Terre, La Spezia und Genua verbunden.",
+        t1: "🚆 Züge: häufige Verbindungen nach Cinque Terre, La Spezia, Genua und Pisa.",
+        t1b: "🎫 Tickets erhältlich am Bahnhof oder über die Trenitalia-App.",
+        t2: "🚌 ATC-Busse: Verbindungen nach La Spezia, Bonassola und Umgebung.",
+        t2b: "📍 Haupt-Haltestelle: Piazza Cavour.",
+        t3: "⛴️ Schiffe: tägliche Abfahrten nach Cinque Terre, Portovenere und Lerici.",
+        t3b: "🌊 Eine landschaftlich schöne Alternative zum Zug.",
+        t4: "🚲 Fahrradverleih: ideal für den Radweg Levanto–Bonassola–Framura.",
+
+        trainLink: "Trenitalia – Fahrpläne & Tickets",
+        busLink: "ATC – Linien & Fahrpläne",
+        boatLink: "Schiffe – Infos & Fahrpläne",
+
+        openMaps: "In Maps öffnen",
+
+        footerCopy: "© 2024 Amandola Guest App – Alle Rechte vorbehalten.",
+        footerNoRepro: "Reproduktion ohne Genehmigung ist untersagt.",
+        footerDisclaimer: "Informationen können variieren: bitte direkt bei den angegebenen Stellen prüfen.",
+
+      }
+    };
+
+    const savedLang = localStorage.getItem("guestapp_lang") || "it";
+    setLanguage(savedLang);
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations["it"];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (!el.dataset.original) el.dataset.original = el.textContent;
+        el.textContent = dict[key] || el.dataset.original;
+      });
+    }
+  </script>
+
+</body>
+</html>
+

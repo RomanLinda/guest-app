@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="title">Come arrivare</title>
+
+  <style>
+    :root {
+      --bg: #050816;
+      --card: #111827;
+      --accent: #22c55e;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --radius-lg: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      padding: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .place {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+
+    .place h2 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .place p, li {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+
+    .map-box {
+      margin-top: 12px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #022c22;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 8px;
+      margin-right: 6px;
+    }
+
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="Amandola.html" class="back" data-i18n="back">‹ Torna indietro</a>
+
+  <h1 data-i18n="title">Come arrivare</h1>
+
+  <!-- AUTO -->
+  <div class="place">
+    <h2 data-i18n="carTitle">In Auto</h2>
+
+    <p data-i18n="car1">
+      Prendere l’uscita <strong>Carrodano–Levanto</strong> sull’Autostrada A12.
+      Subito dopo l’uscita è presente un <strong>autovelox</strong>: prestare attenzione ai limiti.
+    </p>
+
+    <p data-i18n="car2">
+      Seguire le indicazioni per <strong>Levanto</strong> per circa 12 minuti.
+      Entrati in paese, scendere verso il centro e il mare.
+    </p>
+
+    <p data-i18n="car3">
+      Dopo circa 2 minuti, sulla destra vedrai il cartello <strong>“Amandola”</strong>:
+      qui devi <strong>svoltare a destra</strong> e seguire la breve salita.
+    </p>
+
+    <p data-i18n="car4">
+      La casa si trova lungo la strada carrabile: puoi <strong>fermarti davanti all’ingresso per scaricare i bagagli</strong>.
+    </p>
+
+    <p data-i18n="car5">
+      Dopo aver scaricato, puoi parcheggiare negli <strong>stalli bianchi</strong> nelle vicinanze (se disponibili).
+    </p>
+
+    <div class="map-box">
+      <iframe loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d419.3576753841997!2d9.619861855055495!3d44.17802485016443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1781206184469!5m2!1sit!2sit">
+      </iframe>
+    </div>
+
+    <a class="btn" href="https://maps.app.goo.gl/BUbKWJpJgXPmXgPE8" target="_blank" data-i18n="gmapsBtn">Google Maps</a>
+    <a class="btn btn-secondary" href="http://maps.apple.com/?q=Località+Amandola+13+Levanto" target="_blank" data-i18n="amapsBtn">Apple Maps</a>
+  </div>
+
+  <!-- TRENO -->
+  <div class="place">
+    <h2 data-i18n="trainTitle">In Treno</h2>
+
+    <p data-i18n="train1">
+      La stazione di Levanto si trova sulla linea Genova–La Spezia.
+      Treni frequenti da Milano, Genova, Pisa e Firenze.
+    </p>
+
+    <p data-i18n="train2">
+      Una volta scesi dal treno, uscire dalla stazione e dirigersi verso <strong>monte</strong> (non verso il mare).
+    </p>
+
+    <p data-i18n="train3">
+      Dopo pochi minuti troverai il cartello <strong>“Amandola”</strong> sulla sinistra:
+      gira a sinistra e prosegui lungo la strada in salita.
+    </p>
+
+    <p data-i18n="train4">
+      La casa si raggiunge in circa <strong>12–15 minuti a piedi</strong> oppure <strong>3 minuti in taxi</strong>.
+    </p>
+
+    <div class="map-box">
+      <iframe loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d419.3648834432929!2d9.620168641510563!3d44.177011352003426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1781205984240!5m2!1sit!2sit">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- AEREO -->
+  <div class="place">
+    <h2 data-i18n="airTitle">In Aereo</h2>
+
+    <p data-i18n="air1">Aeroporti consigliati:</p>
+    <ul>
+      <li data-i18n="air2">Genova (1h15)</li>
+      <li data-i18n="air3">Pisa (1h20)</li>
+      <li data-i18n="air4">Milano Linate / Malpensa (2h30)</li>
+    </ul>
+
+    <p data-i18n="air5">
+      Dall’aeroporto è possibile raggiungere Levanto in treno o auto a noleggio.
+    </p>
+  </div>
+
+  <!-- ATTENZIONE -->
+  <div class="place">
+    <h2 data-i18n="avoidTitle">Attenzione</h2>
+    <ul>
+      <li data-i18n="avoid1">Non seguire stradine troppo strette: molte sono pedonali.</li>
+      <li data-i18n="avoid2">Non affidarsi a scorciatoie suggerite dal navigatore.</li>
+      <li data-i18n="avoid3">Meglio arrivare davanti alla casa, scaricare e poi cercare parcheggio.</li>
+    </ul>
+  </div>
+
+  <footer style="text-align:center; font-size:11px; color:#6b7280; margin-top:40px; line-height:1.4;">
+    <span data-i18n="footerCopy">© 2024 Amandola Guest App – Tutti i diritti riservati.</span><br>
+    <span data-i18n="footerNoRepro">Vietata la riproduzione senza autorizzazione.</span><br>
+    <span data-i18n="footerDisclaimer">Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.</span>
+  </footer>
+
+  <!-- TRADUZIONI -->
+  <script>
+    const translations = {
+      it: {
+        title: "Come arrivare",
+        back: "‹ Torna indietro",
+
+        carTitle: "In Auto",
+        car1: "Prendere l’uscita Carrodano–Levanto sull’Autostrada A12. Subito dopo l’uscita è presente un autovelox: prestare attenzione ai limiti.",
+        car2: "Seguire le indicazioni per Levanto per circa 12 minuti. Entrati in paese, scendere verso il centro e il mare.",
+        car3: "Dopo circa 2 minuti, sulla destra vedrai il cartello “Amandola”: qui devi svoltare a destra e seguire la breve salita.",
+        car4: "La casa si trova lungo la strada carrabile: puoi fermarti davanti all’ingresso per scaricare i bagagli.",
+        car5: "Dopo aver scaricato, puoi parcheggiare negli stalli bianchi nelle vicinanze (se disponibili).",
+
+        gmapsBtn: "Google Maps",
+        amapsBtn: "Apple Maps",
+
+        trainTitle: "In Treno",
+        train1: "La stazione di Levanto si trova sulla linea Genova–La Spezia. Treni frequenti da Milano, Genova, Pisa e Firenze.",
+        train2: "Una volta scesi dal treno, uscire dalla stazione e dirigersi verso monte (non verso il mare).",
+        train3: "Dopo pochi minuti troverai il cartello “Amandola” sulla sinistra: gira a sinistra e prosegui lungo la strada in salita.",
+        train4: "La casa si raggiunge in circa 12–15 minuti a piedi oppure 3 minuti in taxi.",
+
+        airTitle: "In Aereo",
+        air1: "Aeroporti consigliati:",
+        air2: "Genova (1h15)",
+        air3: "Pisa (1h20)",
+        air4: "Milano Linate / Malpensa (2h30)",
+        air5: "Dall’aeroporto è possibile raggiungere Levanto in treno o auto a noleggio.",
+
+        avoidTitle: "Attenzione",
+        avoid1: "Non seguire stradine troppo strette: molte sono pedonali.",
+        avoid2: "Non affidarsi a scorciatoie suggerite dal navigatore.",
+        avoid3: "Meglio arrivare davanti alla casa, scaricare e poi cercare parcheggio.",
+
+        footerCopy: "© 2024 Amandola Guest App – Tutti i diritti riservati.",
+        footerNoRepro: "Vietata la riproduzione senza autorizzazione.",
+        footerDisclaimer: "Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.",
+
+      },
+
+      en: {
+        title: "How to get here",
+        back: "‹ Go back",
+
+        carTitle: "By car",
+        car1: "Take the Carrodano–Levanto exit on the A12 highway. There is a speed camera immediately after the exit: respect the speed limits.",
+        car2: "Follow signs to Levanto for about 12 minutes. Once in town, drive downhill toward the center and the sea.",
+        car3: "After about 2 minutes, you will see the “Amandola” sign on your right: turn right here and follow the short uphill road.",
+        car4: "The house is on the main driveway: you may stop briefly in front of the entrance to unload your luggage.",
+        car5: "After unloading, you may park in any available white‑lined parking spaces nearby.",
+
+        gmapsBtn: "Google Maps",
+        amapsBtn: "Apple Maps",
+
+        trainTitle: "By train",
+        train1: "Levanto station is on the Genoa–La Spezia line. Frequent trains from Milan, Genoa, Pisa and Florence.",
+        train2: "After leaving the train, exit the station and walk uphill (toward the mountains, not the sea).",
+        train3: "After a few minutes you will see the “Amandola” sign on the left: turn left and follow the uphill road.",
+        train4: "The house is about 12–15 minutes on foot or 3 minutes by taxi.",
+
+        airTitle: "By plane",
+        air1: "Recommended airports:",
+        air2: "Genoa (1h15)",
+        air3: "Pisa (1h20)",
+        air4: "Milan Linate / Malpensa (2h30)",
+        air5: "From the airport you can reach Levanto by train or rental car.",
+
+        avoidTitle: "Attention",
+        avoid1: "Do not follow very narrow streets: many are pedestrian only.",
+        avoid2: "Avoid shortcuts suggested by GPS.",
+        avoid3: "Better to reach the house, unload, and then look for parking.",
+
+        footerCopy: "© 2024 Amandola Guest App – All rights reserved.",
+        footerNoRepro: "Reproduction without permission is prohibited.",
+        footerDisclaimer: "Information may vary: please verify with the listed facilities.",
+
+      },
+
+      fr: {
+        title: "Comment arriver",
+        back: "‹ Retour",
+
+        carTitle: "En voiture",
+        car1: "Prendre la sortie Carrodano–Levanto sur l’autoroute A12. Un radar fixe est présent juste après la sortie : attention aux limitations.",
+        car2: "Suivre les panneaux pour Levanto pendant environ 12 minutes. Une fois en ville, descendre vers le centre et la mer.",
+        car3: "Après environ 2 minutes, vous verrez le panneau “Amandola” sur la droite : tournez ici à droite et suivez la petite montée.",
+        car4: "La maison se trouve le long de la route carrossable : vous pouvez vous arrêter brièvement devant l’entrée pour décharger les bagages.",
+        car5: "Après avoir déchargé, vous pouvez vous garer dans les places blanches disponibles à proximité.",
+
+        gmapsBtn: "Google Maps",
+        amapsBtn: "Apple Maps",
+
+        trainTitle: "En train",
+        train1: "La gare de Levanto se trouve sur la ligne Gênes–La Spezia. Trains fréquents depuis Milan, Gênes, Pise et Florence.",
+        train2: "Après être descendu du train, sortir de la gare et monter vers la colline (et non vers la mer).",
+        train3: "Après quelques minutes, vous verrez le panneau “Amandola” sur la gauche : tournez à gauche et suivez la route en montée.",
+        train4: "La maison se rejoint en environ 12–15 minutes à pied ou 3 minutes en taxi.",
+
+        airTitle: "En avion",
+        air1: "Aéroports recommandés :",
+        air2: "Gênes (1h15)",
+        air3: "Pise (1h20)",
+        air4: "Milan Linate / Malpensa (2h30)",
+        air5: "Depuis l’aéroport, vous pouvez rejoindre Levanto en train ou en voiture de location.",
+
+        avoidTitle: "Attention",
+        avoid1: "Ne pas suivre les ruelles trop étroites : beaucoup sont piétonnes.",
+        avoid2: "Éviter les raccourcis proposés par le GPS.",
+        avoid3: "Il est préférable d’arriver devant la maison, de décharger, puis de chercher une place.",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      es: {
+        title: "Cómo llegar",
+        back: "‹ Volver",
+
+        carTitle: "En coche",
+        car1: "Tomar la salida Carrodano–Levanto en la autopista A12. Hay un radar de velocidad justo después de la salida: respete los límites.",
+        car2: "Seguir las indicaciones hacia Levanto durante unos 12 minutos. Al entrar en el pueblo, bajar hacia el centro y el mar.",
+        car3: "Después de unos 2 minutos verá el cartel “Amandola” a la derecha: gire a la derecha y siga la pequeña subida.",
+        car4: "La casa está en la carretera principal: puede detenerse brevemente frente a la entrada para descargar el equipaje.",
+        car5: "Después de descargar, puede aparcar en las plazas blancas disponibles cerca.",
+
+        gmapsBtn: "Google Maps",
+        amapsBtn: "Apple Maps",
+
+        trainTitle: "En tren",
+        train1: "La estación de Levanto está en la línea Génova–La Spezia. Trenes frecuentes desde Milán, Génova, Pisa y Florencia.",
+        train2: "Tras bajar del tren, salga de la estación y diríjase hacia la montaña (no hacia el mar).",
+        train3: "Después de unos minutos verá el cartel “Amandola” a la izquierda: gire a la izquierda y siga la carretera en subida.",
+        train4: "La casa se alcanza en unos 12–15 minutos a pie o 3 minutos en taxi.",
+
+        airTitle: "En avión",
+        air1: "Aeropuertos recomendados:",
+        air2: "Génova (1h15)",
+        air3: "Pisa (1h20)",
+        air4: "Milán Linate / Malpensa (2h30)",
+        air5: "Desde el aeropuerto se puede llegar a Levanto en tren o coche de alquiler.",
+
+        avoidTitle: "Atención",
+        avoid1: "No seguir calles demasiado estrechas: muchas son peatonales.",
+        avoid2: "Evitar atajos sugeridos por el GPS.",
+        avoid3: "Es mejor llegar a la casa, descargar y luego buscar aparcamiento.",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      de: {
+        title: "Anreise",
+        back: "‹ Zurück",
+
+        carTitle: "Mit dem Auto",
+        car1: "Die Ausfahrt Carrodano–Levanto auf der Autobahn A12 nehmen. Direkt nach der Ausfahrt befindet sich ein Blitzer: bitte die Geschwindigkeitsbegrenzung beachten.",
+        car2: "Den Schildern nach Levanto etwa 12 Minuten folgen. Im Ort die Straße bergab Richtung Zentrum und Meer nehmen.",
+        car3: "Nach etwa 2 Minuten sehen Sie rechts das Schild „Amandola“: hier rechts abbiegen und die kurze Steigung hinauffahren.",
+        car4: "Die Unterkunft liegt an der befahrbaren Straße: Sie können kurz vor dem Eingang anhalten, um Ihr Gepäck auszuladen.",
+        car5: "Nach dem Ausladen können Sie auf den weißen Parkplätzen in der Nähe parken, sofern ein Platz frei ist.",
+
+        gmapsBtn: "Google Maps",
+        amapsBtn: "Apple Maps",
+
+        trainTitle: "Mit dem Zug",
+        train1: "Der Bahnhof Levanto liegt an der Strecke Genua–La Spezia. Häufige Züge aus Mailand, Genua, Pisa und Florenz.",
+        train2: "Nach dem Verlassen des Zuges den Bahnhof verlassen und bergauf gehen (in Richtung Berge, nicht zum Meer).",
+        train3: "Nach einigen Minuten sehen Sie links das Schild „Amandola“: hier links abbiegen und der ansteigenden Straße folgen.",
+        train4: "Die Unterkunft ist in etwa 12–15 Minuten zu Fuß oder in 3 Minuten mit dem Taxi erreichbar.",
+
+        airTitle: "Mit dem Flugzeug",
+        air1: "Empfohlene Flughäfen:",
+        air2: "Genua (1h15)",
+        air3: "Pisa (1h20)",
+        air4: "Mailand Linate / Malpensa (2h30)",
+        air5: "Vom Flughafen aus erreichen Sie Levanto mit dem Zug oder einem Mietwagen.",
+
+        avoidTitle: "Achtung",
+        avoid1: "Keine sehr engen Gassen nehmen: viele sind Fußgängerzonen.",
+        avoid2: "Von Navigationsgeräten vorgeschlagene Abkürzungen möglichst vermeiden.",
+        avoid3: "Am besten zuerst zur Unterkunft fahren, ausladen und dann einen Parkplatz suchen.",
+
+        footerCopy: "© 2024 Amandola Guest App – Alle Rechte vorbehalten.",
+        footerNoRepro: "Reproduktion ohne Genehmigung ist untersagt.",
+        footerDisclaimer: "Informationen können variieren: bitte direkt bei den angegebenen Stellen prüfen.",
+
+      }
+    };
+
+    const savedLang = localStorage.getItem("guestapp_lang") || "it";
+    setLanguage(savedLang);
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations["it"];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (!el.dataset.original) el.dataset.original = el.textContent;
+        if (dict[key]) el.textContent = dict[key];
+        else el.textContent = el.dataset.original;
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+
