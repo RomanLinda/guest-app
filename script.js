@@ -323,120 +323,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================
-     CAROSELLO: DRAG + SNAP + PARALLAX
-  ============================ */
-  if (carousel) {
-    let isDown = false;
-    let startX = 0;
-    let scrollLeft = 0;
-    let touchStartY = 0;
-    let touchStartX = 0;
-    let snapTimeout = null;
-    let ticking = false;
+   CAROSELLO: DRAG + PARALLAX (NO SNAP)
+============================ */
+const carousel = document.querySelector('.carousel');
 
-    // mouse drag
-    carousel.addEventListener("mousedown", e => {
-      isDown = true;
-      carousel.classList.add("dragging");
-      startX = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-    });
+if (carousel) {
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let touchStartY = 0;
+  let touchStartX = 0;
+  let ticking = false;
 
-    ["mouseleave", "mouseup"].forEach(ev =>
-      carousel.addEventListener(ev, () => {
-        isDown = false;
-        carousel.classList.remove("dragging");
-      })
-    );
+  const cards = [...carousel.querySelectorAll(".card")];
 
-    carousel.addEventListener("mousemove", e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.6;
-      carousel.scrollLeft = scrollLeft - walk;
-    });
+  /* --- MOUSE DRAG --- */
+  carousel.addEventListener("mousedown", e => {
+    isDown = true;
+    carousel.classList.add("dragging");
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
 
-    // touch drag
-    carousel.addEventListener("touchstart", e => {
-      const t = e.touches[0];
-      touchStartY = t.clientY;
-      touchStartX = t.clientX;
-      scrollLeft = carousel.scrollLeft;
-      startX = t.clientX;
-    }, { passive: true });
+  ["mouseleave", "mouseup"].forEach(ev =>
+    carousel.addEventListener(ev, () => {
+      isDown = false;
+      carousel.classList.remove("dragging");
+    })
+  );
 
-    carousel.addEventListener("touchmove", e => {
-      const t = e.touches[0];
-      const deltaX = Math.abs(t.clientX - touchStartX);
-      const deltaY = Math.abs(t.clientY - touchStartY);
+  carousel.addEventListener("mousemove", e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1.6;
+    carousel.scrollLeft = scrollLeft - walk;
+  });
 
-      // se prevale lo scroll orizzontale, blocco quello verticale
-      if (deltaX > deltaY) {
-        e.preventDefault();
-        const walk = (t.clientX - startX) * 1.4;
-        carousel.scrollLeft = scrollLeft - walk;
-      }
-    }, { passive: false });
+  /* --- TOUCH DRAG + FIX ANDROID --- */
+  carousel.addEventListener("touchstart", e => {
+    const t = e.touches[0];
+    touchStartY = t.clientY;
+    touchStartX = t.clientX;
+    scrollLeft = carousel.scrollLeft;
+    startX = t.clientX;
+  }, { passive: true });
 
-    // scroll handler unico (snap + parallax)
-    const cards = [...carousel.querySelectorAll(".card")];
+  carousel.addEventListener("touchmove", e => {
+    const t = e.touches[0];
+    const deltaX = Math.abs(t.clientX - touchStartX);
+    const deltaY = Math.abs(t.clientY - touchStartY);
 
-    function handleScroll() {
-      ticking = false;
+    // Se il movimento è verticale → lascia scorrere la pagina
+    if (deltaY > deltaX) return;
 
-      const rect = carousel.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const baseLeft = rect.left;
-      const center = rect.width / 2;
+    // Se è orizzontale → blocca lo scroll verticale
+    e.preventDefault();
+    const walk = (t.clientX - startX) * 1.4;
+    carousel.scrollLeft = scrollLeft - walk;
+  }, { passive: false });
 
-      // parallax leggero
-      const maxShift = 6;
-      cards.forEach(card => {
-        const cRect = card.getBoundingClientRect();
-        const cardCenter = cRect.left + cRect.width / 2;
-        const distance = cardCenter - (baseLeft + center);
-        const shift = (distance / center) * maxShift;
-        card.style.transform = `translateX(${shift}px) translateZ(0)`;
-      });
+  /* --- PARALLAX LEGGERO --- */
+  function handleScroll() {
+    ticking = false;
 
-      // snap morbido (solo quando non stai trascinando col mouse)
-      if (!isDown) {
-        clearTimeout(snapTimeout);
-        snapTimeout = setTimeout(() => {
-          let closest = null;
-          let minDist = Infinity;
+    const rect = carousel.getBoundingClientRect();
+    const center = rect.width / 2;
+    const baseLeft = rect.left;
+    const maxShift = 6;
 
-          cards.forEach(card => {
-            const cRect = card.getBoundingClientRect();
-            const cardCenter = cRect.left + cRect.width / 2;
-            const dist = Math.abs(cardCenter - centerX);
-            if (dist < minDist) {
-              minDist = dist;
-              closest = card;
-            }
-          });
-
-          if (closest) {
-            closest.scrollIntoView({
-              behavior: "smooth",
-              inline: "center",
-              block: "nearest"
-            });
-          }
-        }, 140);
-      }
-    }
-
-    carousel.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-        });
-        ticking = true;
-      }
+    cards.forEach(card => {
+      const cRect = card.getBoundingClientRect();
+      const cardCenter = cRect.left + cRect.width / 2;
+      const distance = cardCenter - (baseLeft + center);
+      const shift = (distance / center) * maxShift;
+      card.style.transform = `translateX(${shift}px) translateZ(0)`;
     });
   }
+
+  carousel.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+      });
+      ticking = true;
+    }
+  });
+}
 
 
   /* ============================

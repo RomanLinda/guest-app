@@ -203,54 +203,61 @@ header {
   letter-spacing: -0.2px;
 }
 
-/* CAROSELLO SUPER-PREMIUM */
+
+/* CAROSELLO SUPER-PREMIUM (COMPATIBILE ANDROID + IPHONE) */
 .carousel {
   display: flex;
   gap: 18px;
   overflow-x: auto;
   padding: 30px 8px 15px 8px;
   margin: 0 -18px 48px -18px;
-  scroll-snap-type: x mandatory;
+
+  /* FIX: rimuove lo scroll-snap che crea problemi su Android */
+  scroll-snap-type: none !important;
+
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   position: relative;
-  perspective: 1000px; /* necessario per il parallax */
-  overscroll-behavior-x: contain; /* evita l'effetto bounce su mobile */
-  overscroll-behavior-y: none; /* previene lo scroll verticale indesiderato durante il drag */
-  touch-action: pan-x; /* migliora la reattività del drag su mobile */
-  scroll-behavior: smooth; /* scroll fluido quando si clicca su una card */
-  -webkit-overflow-scrolling: touch; /* migliora la fluidità dello scroll su iOS */
+  perspective: 1000px;
+
+  /* FIX: permette sia pan-x che pan-y */
+  touch-action: pan-x pan-y;
+
+  /* FIX: non bloccare lo scroll verticale */
+  overscroll-behavior-y: auto;
+
+  scroll-behavior: smooth;
 }
 
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-
-
-/* CARD COMPATTE E ALLINEATE */
+/* CARD PREMIUM */
 .card {
   min-width: 185px;
-  min-height: 160px; /* tutte alla stessa altezza */
+  min-height: 160px;
   background: rgba(15, 23, 42, 0.85);
   border-radius: 20px;
   padding: 16px;
   border: 1px solid rgba(148, 163, 184, 0.18);
-  scroll-snap-align: center;
+
+  /* FIX: rimuove snap forzato */
+  scroll-snap-align: none !important;
+
   cursor: pointer;
   transition: transform 0.22s ease, border-color 0.22s ease;
   backdrop-filter: blur(14px) saturate(180%);
   -webkit-backdrop-filter: blur(14px) saturate(180%);
   transform-origin: center;
   will-change: transform;
-  box-shadow: none; /* nessuna ombra */
 }
 
-/* Hover leggero e stabile */
 .card:hover {
   transform: translateY(-4px) scale(1.03);
   border-color: rgba(255, 255, 255, 0.25);
 }
+
 
 /* Testi interni */
 .card-tag {
