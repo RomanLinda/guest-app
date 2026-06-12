@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Guest App - Casa Vacanze</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-logo">A</div>
+        <div>
+          <div class="brand-text-title">Casa Amandola</div>
+          <div class="brand-text-sub" data-i18n="subtitle">
+            Benvenuti nella vostra casa vacanze
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="hero-title" data-i18n="heroTitle">
+            Tutto ciò che vi serve, in un posto solo
+          </div>
+          <div class="hero-sub" data-i18n="heroSub">
+            Wi‑Fi, regole, consigli, numeri utili e contatto diretto con l’host.
+          </div>
+        </div>
+
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span data-i18n="heroPill">Ospiti attesi oggi</span>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-chip">
+          <div class="hero-chip-label" data-i18n="wifi">Connessione Wi‑Fi</div>
+          <div class="hero-chip-value">
+            <strong>CasaAmandola</strong><br />
+            <span>password: 1234-5678</span>
+          </div>
+        </div>
+
+        <div class="hero-chip">
+          <div class="hero-chip-label" data-i18n="checkin">Check‑in</div>
+          <div class="hero-chip-value"><strong>15:00–22:00</strong></div>
+        </div>
+
+        <div class="hero-chip">
+          <div class="hero-chip-label" data-i18n="checkout">Check‑out</div>
+          <div class="hero-chip-value"><strong>entro le 10:00</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROSELLO -->
+    <div class="section-title" data-i18n="quickAccess">Accesso rapido</div>
+
+    <div class="carousel">
+      <div class="card" data-target="ComeArrivare">
+        <div class="card-tag" data-i18n="arriveTag">Come arrivare</div>
+        <div class="card-title" data-i18n="arriveTitle">Indicazioni stradali</div>
+        <div class="card-desc" data-i18n="arriveDesc">Come raggiungere la casa vacanze.</div>
+        <div class="card-footer">
+          <a href="ComeArrivare.html" class="card-pill" data-i18n="arrivePill" style="text-decoration:none; color:inherit;">
+             Mappa & indicazioni
+          </a>
+          <span class="card-arrow">›</span>
+        </div>
+      </div>
+
+      <div class="card" data-target="doc-casa">
+        <div class="card-tag" data-i18n="docsTag">Documenti casa</div>
+        <div class="card-title" data-i18n="docsTitle">Manuali & info tecniche</div>
+        <div class="card-desc" data-i18n="docsDesc">Elettrodomestici, Wi‑Fi, riscaldamento.</div>
+        <div class="card-footer">
+          <span class="card-pill" data-i18n="docsPill">PDF & istruzioni</span>
+          <span class="card-arrow">›</span>
+        </div>
+      </div>
+
+      <div class="card" data-target="numeri-utili">
+        <div class="card-tag" data-i18n="numbersTag">Numeri utili</div>
+        <div class="card-title" data-i18n="numbersTitle">Emergenze & contatti</div>
+        <div class="card-desc" data-i18n="numbersDesc">Emergenza, medico, taxi, host.</div>
+        <div class="card-footer">
+          <span class="card-pill" data-i18n="numbersPill">Sempre a portata</span>
+          <span class="card-arrow">›</span>
+        </div>
+      </div>
+
+      <div class="card" data-target="regole-casa">
+        <div class="card-tag" data-i18n="rulesTag">Regole</div>
+        <div class="card-title" data-i18n="rulesTitle">Regole della casa</div>
+        <div class="card-desc" data-i18n="rulesDesc">Silenzio, ospiti, animali.</div>
+        <div class="card-footer">
+          <span class="card-pill" data-i18n="rulesPill">Per una convivenza serena</span>
+          <span class="card-arrow">›</span>
+        </div>
+      </div>
+
+      <div class="card" data-target="muoversi-mangiare">
+        <div class="card-tag" data-i18n="moveTag">Consigli</div>
+        <div class="card-title" data-i18n="moveTitle">Muoversi & mangiare</div>
+        <div class="card-desc" data-i18n="moveDesc">Ristoranti, bar, parcheggi.</div>
+        <div class="card-footer">
+          <span class="card-pill" data-i18n="movePill">Suggeriti dall’host</span>
+          <span class="card-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEZIONI -->
+    <section id="doc-casa" class="section">
+      <h3 data-i18n="secDocsTitle">Documenti & manuali casa</h3>
+      <ul>
+        <li data-i18n="secDocs1">Manuale elettrodomestici</li>
+        <li data-i18n="secDocs2">Istruzioni riscaldamento / aria condizionata</li>
+        <li data-i18n="secDocs3">Planimetria e uscite di emergenza</li>
+      </ul>
+    </section>
+
+    <section id="numeri-utili" class="section">
+      <h3 data-i18n="secNumbersTitle">Numeri utili & emergenza</h3>
+      <ul>
+        <li data-i18n="secNumbers1"><strong>112</strong> – Numero unico emergenze</li>
+        <li data-i18n="secNumbers2"><strong>118</strong> – Emergenza sanitaria</li>
+        <li data-i18n="secNumbers3"><strong>Host:</strong> +39 333 0000000</li>
+      </ul>
+    </section>
+
+    <section id="regole-casa" class="section">
+      <h3 data-i18n="secRulesTitle">Regole della casa</h3>
+      <ul>
+        <li data-i18n="secRules1">Non fumare all’interno.</li>
+        <li data-i18n="secRules2">Rispettare gli orari di silenzio.</li>
+        <li><a href="RaccoltaDifferenziata.html"><span data-i18n="secRules3">Differenziare i rifiuti.</span></a></li>
+      </ul>
+    </section>
+
+    <section id="muoversi-mangiare" class="section">
+      <h3 data-i18n="secMoveTitle">Muoversi & mangiare</h3>
+      <ul>
+        <li><a href="Ristoranti consigliati.html"><span data-i18n="secMove1">Ristoranti consigliati</span></a></li>
+        <li><a href="Barconsigliati.html"><span data-i18n="secMove2">Bar per colazione</span></a></li>
+        <li><a href="Parcheggi.html"><span data-i18n="secMove3">Parcheggi e trasporti</span></a></li>
+        <li><a href="Servizi.html"><span data-i18n="secMove4">Servizi</span></a></li>
+        <li><a href="Attività.html"><span data-i18n="secMove5">Attività</span></a></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- WHATSAPP -->
+  <a class="whatsapp-fab" href="https://wa.me/393330000000" target="_blank" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <footer style="text-align:center; font-size:11px; color:#6b7280; margin-top:40px; line-height:1.4;">
+    <span data-i18n="footerCopy">© 2024 Amandola Guest App – Tutti i diritti riservati.</span><br>
+    <span data-i18n="footerNoRepro">Vietata la riproduzione senza autorizzazione.</span><br>
+    <span data-i18n="footerDisclaimer">Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

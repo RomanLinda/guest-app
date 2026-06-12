@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="activitiesTitle">Attività e cose da fare</title>
+
+  <style>
+    :root {
+      --bg: #050816;
+      --card: #111827;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --radius-lg: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      padding: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .place {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+
+    .place h2 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .place p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+
+    iframe {
+      width: 100%;
+      height: 180px;
+      border: 0;
+      border-radius: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #022c22;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 6px;
+    }
+
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="Amandola.html" class="back" data-i18n="back">‹ Torna indietro</a>
+
+  <h1 data-i18n="activitiesTitle">Attività e cose da fare</h1>
+
+  <!-- CICLOPEDONALE -->
+  <div class="place">
+    <h2 data-i18n="cycleTitle">Pista ciclopedonale Levanto–Bonassola–Framura</h2>
+    <p data-i18n="cycleDesc">Una splendida pista sul mare ricavata dalle vecchie gallerie ferroviarie.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Pista+Ciclopedonale+Levanto+Bonassola+Framura&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Pista+Ciclopedonale+Levanto+Bonassola+Framura" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- TREKKING -->
+  <div class="place">
+    <h2 data-i18n="trekTitle">Trekking Levanto–Monterosso</h2>
+    <p data-i18n="trekDesc">Uno dei sentieri più belli delle Cinque Terre, panorami mozzafiato sul mare.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Trekking+Levanto+Monterosso&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Trekking+Levanto+Monterosso" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- BOAT TOUR -->
+  <div class="place">
+    <h2 data-i18n="boatTitle">Rosa dei Venti – Boat Tour Levanto</h2>
+    <p data-i18n="boatDesc">Escursioni in barca lungo la costa delle Cinque Terre, tour privati e uscite al tramonto.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Rosa+dei+Venti+Boat+Tour+Levanto&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Rosa+dei+Venti+Boat+Tour+Levanto" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- DIVING -->
+  <div class="place">
+    <h2 data-i18n="divingTitle">Levanto Diving – Centro immersioni</h2>
+    <p data-i18n="divingDesc">Immersioni guidate, snorkeling e corsi subacquei nelle acque delle Cinque Terre.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Levanto+Diving&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Levanto+Diving" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- SURF -->
+  <div class="place">
+    <h2 data-i18n="surfTitle">Levanto Surf School</h2>
+    <p data-i18n="surfDesc">Lezioni di surf per principianti e avanzati, noleggio tavole e attrezzatura.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Levanto+Surf+School&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Levanto+Surf+School" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- SPIAGGE -->
+  <div class="place">
+    <h2 data-i18n="beachTitle">Spiagge di Levanto</h2>
+    <p data-i18n="beachDesc">Ampia spiaggia sabbiosa, stabilimenti balneari e zone libere.</p>
+
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=Spiaggia+di+Levanto&output=embed">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com/?q=Spiaggia+di+Levanto" target="_blank" data-i18n="openMaps">
+      Apri su Maps
+    </a>
+  </div>
+
+  <!-- EVENTI -->
+  <div class="place">
+    <h2 data-i18n="eventsTitle">Sagre ed eventi a Levanto</h2>
+    <p data-i18n="eventsDesc">Calendario aggiornato di sagre, feste, eventi culturali e manifestazioni.</p>
+
+    <a class="btn btn-secondary" href="https://www.comune.levanto.sp.it" target="_blank" data-i18n="eventsLink">
+      Vai al sito ufficiale del Comune di Levanto
+    </a>
+  </div>
+
+  <!-- PARCO -->
+  <div class="place">
+    <h2 data-i18n="parkTitle">Parco Nazionale delle Cinque Terre</h2>
+    <p data-i18n="parkDesc">Informazioni ufficiali su sentieri, mappe, orari, servizi e aggiornamenti del Parco.</p>
+
+    <a class="btn btn-secondary" href="https://www.parconazionale5terre.it" target="_blank" data-i18n="parkLink">
+      Vai al sito ufficiale del Parco delle Cinque Terre
+    </a>
+  </div>
+
+  <footer style="text-align:center; font-size:11px; color:#6b7280; margin-top:40px; line-height:1.4;">
+    <span data-i18n="footerCopy">© 2024 Amandola Guest App – Tutti i diritti riservati.</span><br>
+    <span data-i18n="footerNoRepro">Vietata la riproduzione senza autorizzazione.</span><br>
+    <span data-i18n="footerDisclaimer">Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.</span>
+  </footer>
+
+  <script>
+    const translations = {
+      it: {
+        titleActivities: "Attività e cose da fare",
+        activitiesTitle: "Attività e cose da fare",
+        back: "‹ Torna indietro",
+
+        cycleTitle: "Pista ciclopedonale Levanto–Bonassola–Framura",
+        cycleDesc: "Una splendida pista sul mare ricavata dalle vecchie gallerie ferroviarie.",
+
+        trekTitle: "Trekking Levanto–Monterosso",
+        trekDesc: "Uno dei sentieri più belli delle Cinque Terre, panorami mozzafiato sul mare.",
+
+        boatTitle: "Rosa dei Venti – Boat Tour Levanto",
+        boatDesc: "Escursioni in barca lungo la costa delle Cinque Terre, tour privati e uscite al tramonto.",
+
+        divingTitle: "Levanto Diving – Centro immersioni",
+        divingDesc: "Immersioni guidate, snorkeling e corsi subacquei nelle acque delle Cinque Terre.",
+
+        surfTitle: "Levanto Surf School",
+        surfDesc: "Lezioni di surf per principianti e avanzati, noleggio tavole e attrezzatura.",
+
+        beachTitle: "Spiagge di Levanto",
+        beachDesc: "Ampia spiaggia sabbiosa, stabilimenti balneari e zone libere.",
+
+        eventsTitle: "Sagre ed eventi a Levanto",
+        eventsDesc: "Calendario aggiornato di sagre, feste, eventi culturali e manifestazioni.",
+        eventsLink: "Vai al sito ufficiale del Comune di Levanto",
+
+        parkTitle: "Parco Nazionale delle Cinque Terre",
+        parkDesc: "Informazioni ufficiali su sentieri, mappe, orari, servizi e aggiornamenti del Parco.",
+        parkLink: "Vai al sito ufficiale del Parco delle Cinque Terre",
+
+        openMaps: "Apri su Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tutti i diritti riservati.",
+        footerNoRepro: "Vietata la riproduzione senza autorizzazione.",
+        footerDisclaimer: "Le informazioni potrebbero variare: verificare sempre presso le strutture indicate.",
+
+      },
+
+      en: {
+        titleActivities: "Activities and things to do",
+        activitiesTitle: "Activities and things to do",
+        back: "‹ Go back",
+
+        cycleTitle: "Levanto–Bonassola–Framura cycle path",
+        cycleDesc: "A beautiful seaside path built inside old railway tunnels.",
+
+        trekTitle: "Levanto–Monterosso hiking trail",
+        trekDesc: "One of the most scenic trails of Cinque Terre, with breathtaking sea views.",
+
+        boatTitle: "Rosa dei Venti – Boat Tour Levanto",
+        boatDesc: "Boat excursions along the Cinque Terre coast, private tours and sunset trips.",
+
+        divingTitle: "Levanto Diving – Dive Center",
+        divingDesc: "Guided dives, snorkeling and scuba courses in the Cinque Terre waters.",
+
+        surfTitle: "Levanto Surf School",
+        surfDesc: "Surf lessons for beginners and advanced, board and equipment rental.",
+
+        beachTitle: "Levanto beaches",
+        beachDesc: "Large sandy beach with beach clubs and free areas.",
+
+        eventsTitle: "Festivals and events in Levanto",
+        eventsDesc: "Updated calendar of festivals, fairs, cultural events and local activities.",
+        eventsLink: "Visit the official website of the Municipality of Levanto",
+
+        parkTitle: "Cinque Terre National Park",
+        parkDesc: "Official information about trails, maps, schedules, services and updates.",
+        parkLink: "Visit the official Cinque Terre National Park website",
+
+        openMaps: "Open in Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – All rights reserved.",
+        footerNoRepro: "Reproduction without permission is prohibited.",
+        footerDisclaimer: "Information may vary: please verify with the listed facilities.",
+
+      },
+
+      fr: {
+        titleActivities: "Activités et choses à faire",
+        activitiesTitle: "Activités et choses à faire",
+        back: "‹ Retour",
+
+        cycleTitle: "Piste cyclable Levanto–Bonassola–Framura",
+        cycleDesc: "Une magnifique piste en bord de mer dans d’anciennes galeries ferroviaires.",
+
+        trekTitle: "Randonnée Levanto–Monterosso",
+        trekDesc: "L’un des plus beaux sentiers des Cinque Terre, vues spectaculaires sur la mer.",
+
+        boatTitle: "Rosa dei Venti – Excursions en bateau Levanto",
+        boatDesc: "Excursions en bateau le long des Cinque Terre, tours privés et sorties au coucher du soleil.",
+
+        divingTitle: "Levanto Diving – Centre de plongée",
+        divingDesc: "Plongées guidées, snorkeling et cours de plongée dans les eaux des Cinque Terre.",
+
+        surfTitle: "Levanto Surf School",
+        surfDesc: "Cours de surf pour débutants et avancés, location de planches et matériel.",
+
+        beachTitle: "Plages de Levanto",
+        beachDesc: "Grande plage de sable, établissements et zones libres.",
+
+        eventsTitle: "Fêtes et événements à Levanto",
+        eventsDesc: "Calendrier mis à jour des fêtes, festivals, événements culturels et manifestations.",
+        eventsLink: "Visitez le site officiel de la Commune de Levanto",
+
+        parkTitle: "Parc National des Cinque Terre",
+        parkDesc: "Informations officielles sur sentiers, cartes, horaires, services et actualités.",
+        parkLink: "Visitez le site officiel du Parc des Cinque Terre",
+
+        openMaps: "Ouvrir dans Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      es: {
+        titleActivities: "Actividades y cosas para hacer",
+        activitiesTitle: "Actividades y cosas para hacer",
+        back: "‹ Volver",
+
+        cycleTitle: "Ciclovía Levanto–Bonassola–Framura",
+        cycleDesc: "Una hermosa ruta costera dentro de antiguos túneles ferroviarios.",
+
+        trekTitle: "Sendero Levanto–Monterosso",
+        trekDesc: "Uno de los senderos más bonitos de Cinque Terre, con vistas espectaculares al mar.",
+
+        boatTitle: "Rosa dei Venti – Paseos en barco Levanto",
+        boatDesc: "Excursiones en barco por la costa de Cinque Terre, tours privados y salidas al atardecer.",
+
+        divingTitle: "Levanto Diving – Centro de buceo",
+        divingDesc: "Inmersiones guiadas, snorkel y cursos de buceo en las aguas de Cinque Terre.",
+
+        surfTitle: "Levanto Surf School",
+        surfDesc: "Clases de surf para principiantes y avanzados, alquiler de tablas y equipo.",
+
+        beachTitle: "Playas de Levanto",
+        beachDesc: "Amplia playa de arena, zonas libres y balnearios.",
+
+        eventsTitle: "Fiestas y eventos en Levanto",
+        eventsDesc: "Calendario actualizado de fiestas, ferias, eventos culturales y actividades locales.",
+        eventsLink: "Visita el sitio oficial del Municipio de Levanto",
+
+        parkTitle: "Parque Nacional Cinque Terre",
+        parkDesc: "Información oficial sobre senderos, mapas, horarios, servicios y novedades.",
+        parkLink: "Visita el sitio oficial del Parque Cinque Terre",
+
+        openMaps: "Abrir en Maps",
+
+        footerCopy: "© 2024 Amandola Guest App – Tous droits réservés.",
+        footerNoRepro: "Reproduction interdite sans autorisation.",
+        footerDisclaimer: "Les informations peuvent varier : vérifiez auprès des établissements indiqués.",
+
+      },
+
+      de: {
+        titleActivities: "Aktivitäten und Unternehmungen",
+        activitiesTitle: "Aktivitäten und Unternehmungen",
+        back: "‹ Zurück",
+
+        cycleTitle: "Radweg Levanto–Bonassola–Framura",
+        cycleDesc: "Ein wunderschöner Küstenweg durch alte Eisenbahntunnel.",
+
+        trekTitle: "Wanderweg Levanto–Monterosso",
+        trekDesc: "Einer der schönsten Wege der Cinque Terre mit atemberaubender Aussicht.",
+
+        boatTitle: "Rosa dei Venti – Bootstour Levanto",
+        boatDesc: "Bootsausflüge entlang der Cinque-Terre-Küste, private Touren und Sonnenuntergangsfahrten.",
+
+        divingTitle: "Levanto Diving – Tauchzentrum",
+        divingDesc: "Geführte Tauchgänge, Schnorcheln und Tauchkurse in den Cinque Terre Gewässern.",
+
+        surfTitle: "Levanto Surf School",
+        surfDesc: "Surfunterricht für Anfänger und Fortgeschrittene, Brett- und Ausrüstungsverleih.",
+
+        beachTitle: "Strände von Levanto",
+        beachDesc: "Großer Sandstrand mit freien Bereichen und Badeanstalten.",
+
+        eventsTitle: "Feste und Veranstaltungen in Levanto",
+        eventsDesc: "Aktueller Kalender mit Festen, kulturellen Veranstaltungen und lokalen Events.",
+        eventsLink: "Zur offiziellen Website der Gemeinde Levanto",
+
+        parkTitle: "Nationalpark Cinque Terre",
+        parkDesc: "Offizielle Informationen zu Wegen, Karten, Zeiten, Dienstleistungen und Updates.",
+        parkLink: "Zur offiziellen Website des Nationalparks Cinque Terre",
+
+        openMaps: "In Maps öffnen",
+
+        footerCopy: "© 2024 Amandola Guest App – Alle Rechte vorbehalten.",
+        footerNoRepro: "Reproduktion ohne Genehmigung ist untersagt.",
+        footerDisclaimer: "Informationen können variieren: bitte direkt bei den angegebenen Stellen prüfen.",
+
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.it;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (!el.dataset.original) el.dataset.original = el.textContent;
+        el.textContent = dict[key] || el.dataset.original;
+      });
+    }
+
+    const savedLang = localStorage.getItem("guestapp_lang") || "it";
+    setLanguage(savedLang);
+  </script>
+
+</body>
+</html>
+
+
