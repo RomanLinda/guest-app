@@ -259,13 +259,33 @@ const translations = {
 };
 
 
+
+
+function toggleLangMenu(e) {
+  if (e) e.stopPropagation(); // evita che il click arrivi al document
+  const menu = document.getElementById("langMenu");
+  if (!menu) return;
+  menu.classList.toggle("open");
+}
+
+// Chiudi il menu quando clicchi fuori
+document.addEventListener("click", (e) => {
+  const menu = document.getElementById("langMenu");
+  const icon = document.querySelector(".lang-icon");
+  if (!menu || !icon) return;
+
+  if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    menu.classList.remove("open");
+  }
+});
+
 /* ============================
    INIT
 ============================ */
 document.addEventListener("DOMContentLoaded", () => {
   const langButtons = document.querySelectorAll(".lang-btn");
+  const menuLangButtons = document.querySelectorAll(".lang-menu button");
   const fab = document.querySelector(".whatsapp-fab");
-  const carousel = document.querySelector(".carousel");
 
   /* ---------- CAMBIO LINGUA ---------- */
   function setLanguage(lang) {
@@ -276,22 +296,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dict[key]) el.textContent = dict[key];
     });
 
-    // aggiorna stato pulsanti lingua
+    // aggiorna stato pulsanti lingua (header)
     langButtons.forEach(btn => {
       btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
     });
 
-    // piccolo tocco visivo sul FAB (facoltativo ma carino)
     if (fab) {
       fab.style.background = lang === "en" ? "#0ea5e9" : "#22c55e";
     }
   }
 
-  // lingua salvata o default
   const savedLang = localStorage.getItem("guestapp_lang") || "it";
   setLanguage(savedLang);
 
-  // un solo listener per tutte le lingue
+  // bottoni lingua header
   langButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
@@ -299,6 +317,20 @@ document.addEventListener("DOMContentLoaded", () => {
       setLanguage(lang);
     });
   });
+
+  // bottoni lingua nel menu a comparsa
+  menuLangButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const lang = btn.getAttribute("data-lang");
+      localStorage.setItem("guestapp_lang", lang);
+      setLanguage(lang);
+      const menu = document.getElementById("langMenu");
+      if (menu) menu.classList.remove("open");
+    });
+  });
+});
+
 
 
   /* ============================
@@ -422,6 +454,5 @@ if (carousel) {
       setTimeout(() => waButton.classList.remove("wa-pulse"), 180);
     });
   }
-});
 
 

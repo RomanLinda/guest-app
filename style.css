@@ -204,6 +204,84 @@ header {
 }
 
 
+
+
+
+.lang-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icona globo (desktop: nascosta) */
+.lang-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Menu lingue a comparsa con animazione */
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: rgba(15,23,42,0.95);
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.lang-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.lang-menu button {
+  display: block;
+  width: 100%;
+  margin: 4px 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 13px;
+}
+
+/* MOBILE: sotto 450px → nascondi bottoni, mostra globo */
+@media (max-width: 450px) {
+  .lang-switch {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .lang-icon {
+    display: block !important;
+  }
+}
+
+
+
+
+
+
 /* CAROSELLO SUPER-PREMIUM (COMPATIBILE ANDROID + IPHONE) */
 .carousel {
   display: flex;
