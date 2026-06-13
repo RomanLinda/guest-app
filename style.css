@@ -201,6 +201,7 @@ header {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.2px;
+  padding: 14px 14px;
 }
 
 
@@ -216,13 +217,18 @@ header {
 
 /* Icona globo (desktop: nascosta) */
 .lang-icon {
-  display: none;
+  display:none;
   font-size: 20px;
   cursor: pointer;
   padding: 6px;
   border-radius: 50%;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
+}
+
+.lang-icon span {
+  display: block;
+  transform: translateY(-1px); /* centratura ottimale del globo */
 }
 
 /* Menu lingue a comparsa con animazione */
@@ -287,8 +293,8 @@ header {
   display: flex;
   gap: 18px;
   overflow-x: auto;
-  padding: 30px 8px 15px 8px;
-  margin: 0 -18px 48px -18px;
+  padding: 20px 8px 20px 8px;
+  margin: 0 0 48px 0;
 
   /* FIX: rimuove lo scroll-snap che crea problemi su Android */
   scroll-snap-type: none !important;
